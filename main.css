@@ -1,0 +1,93 @@
+@font-face{
+	font-family: "Raleway";
+	src: url("fonts/Raleway.ttf");
+	src: local(),
+		url("fonts/Raleway.woff") format("woff");
+}
+*{
+    padding: none;
+    margin: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f88f01;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+}
+.container-juego, .container-final-juego{
+    display: none;
+}
+.container-padre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-logo{
+    margin: none;
+}
+.logo{
+    width: 60%;
+}
+.container-inicio{
+    width: 45%;
+    margin-top: 3%;
+    background-color: rgb(248, 248, 248);
+    border: 8px solid #6a492b;
+    border-radius: 20px;
+    padding: 45px 60px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.container-inicio .container-logo{
+    text-align: center;
+} 
+.container-inputs{
+    text-align: center;
+    margin-top: 4.5%;
+}
+.container-inputs input{
+    padding: 12px 8px;
+    margin-bottom: 5%;
+    text-align: center;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 4px solid #c57000;
+    width: 55%;
+}
+.container-inputs input:focus{
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.btn-inicio{
+    padding: 10px 20px;
+    border-radius: 100px;
+    background-color: transparent;
+    margin-right: 1%;
+    border: 3px solid #c57000;
+    transition: all 0.5s;
+}
+.btn-inicio:hover{
+    border-color: #e27802;
+    background-color: rgb(233, 233, 233);
+    color: rgb(24, 24, 24);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.btn-inicio:focus{
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.container-botones-inicio::before{
+    border: 1px solid #f88f01;
+    margin: 0 auto;
+    border-radius: 100px;
+    width: 100%;
+    display: block;
+    margin-bottom: 1.8%;
+    content: "";
+}

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@font-face { font-family:"Cosmic Blaster";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+.str2 {stroke-width:36.98;stroke-miterlimit:2.61313}
+.str3 {stroke:#2E2E2E;stroke-width:4.28;stroke-miterlimit:2.61313}
+.str0 {stroke:black;stroke-width:42.8;stroke-miterlimit:2.61313}
+.str1 {stroke:#402A16;stroke-width:42.8;stroke-miterlimit:2.61313}
+.fil0 {fill:#FEFEFE}
+.fil3 {fill:#151515}
+.fil4 {fill:#694422}
+.fil2 {fill:#FDFDFD}
+.fil1 {fill:#FF8400}
+.fnt0 {font-weight:normal;font-size:115.72px;font-family:'Cosmic Blaster'}
+body{background-color: transparent !important;}

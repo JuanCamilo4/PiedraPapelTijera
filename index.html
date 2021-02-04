@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra, papel o tijera</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="normalize.css">
 </head>
 <body>
     <div class="container-padre">
         <div class="container-inicio"><!-----------------------------------Inicio del juego-->
-            <img src="" alt="logo">
-            <p>El clasico juego de piedra, papel o tijera, pero algunas mejoras.</p>
+            <div class="container-logo">
+                <img src="img/Logo.png" alt="Logo" class="logo">
+            </div>
+            <p style="text-align: center; font-size: 1.2vw;">El clasico juego de piedra, papel o tijera, pero algunas mejoras.</p>
             
-            <input type="text" name="nombre" id="nombreJugador" placeholder="Nombre de usuario" required>
-            <div class="botones-inicio">
+            <div class="container-inputs">
+                <input type="text" name="nombre" id="nombreJugador" placeholder="Nombre de usuario">
+            </div>
+            <div class="container-botones-inicio">
                 <button id="btnJugar" class="btn-inicio">Jugar</button>
                 <button id="btnInfoDev" class="btn-inicio">Información sobre el desarrollador</button>
             </div>
@@ -24,7 +29,7 @@
                 <h2>Marcador</h2>
                 <div class="container-marcadores">
                     <div class="container-marcador-puntaje">
-                        <p id="txtNombreJugador" class="participante">${Jugador}</p>
+                        <p id="txtNombreJugador" class="participante">Jugador</p>
                         <div class="puntaje" id="puntosJugador"></div>
                     </div>
                     <div class="container-marcador-puntaje">
@@ -81,6 +86,6 @@
         
     </div>
 
-    <script src="funciones.js"></script>
+    <script src="logicaJuego.js"></script>
 </body>
 </html>
