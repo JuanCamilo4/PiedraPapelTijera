@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra, papel o tijera</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="juego.css">
     <link rel="stylesheet" href="normalize.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
             <div class="container-logo">
                 <img src="img/Logo.png" alt="Logo" class="logo">
             </div>
-            <p style="text-align: center; font-size: 1.2vw;">El clasico juego de piedra, papel o tijera, pero algunas mejoras.</p>
+            <p style="text-align: center; font-size: 1.2vw;" id="test">El clasico juego de piedra, papel o tijera, pero con algunas mejoras.</p>
             
             <div class="container-inputs">
                 <input type="text" name="nombre" id="nombreJugador" placeholder="Nombre de usuario">
@@ -30,38 +31,35 @@
                 <div class="container-marcadores">
                     <div class="container-marcador-puntaje">
                         <p id="txtNombreJugador" class="participante">Jugador</p>
-                        <div class="puntaje" id="puntosJugador"></div>
+                        <div class="puntaje" id="puntosJugador">0</div>
                     </div>
                     <div class="container-marcador-puntaje">
                         <p class="participante">IA</p>
-                        <div class="puntaje" id="puntosIA"></div>
+                        <div class="puntaje" id="puntosIA">0</div>
                     </div>
                 </div>
             </div>
 
             <div class="container-ganador"> <!--container para mostrar la eleccion de la maquina-->
-                <p class="participante">IA: </p>
-                <p class="participante IA-eleccion"></p>
+                <p class="participante IA-eleccion" >Eleccion del contrincante: </p>
+                <p class="participante IA-eleccion " id="eleccionIA"></p>
             </div>
 
             <div class="container-botones">
-                <button id="btnPiedra" class="btn-opcion">Piedra</button>
-                <button id="btnTijera" class="btn-opcion">Tijera</button>
-                <button id="btnPapel" class="btn-opcion">Papel</button>              
+                <button id="btnPiedra" class="btn-opcion" onmousedown="sonido.play()"></button>
+                <button id="btnTijera" class="btn-opcion"></button>
+                <button id="btnPapel" class="btn-opcion"></button>              
             </div>
 
-            <div class="container-anuncio-puntos"><!--container para mostrar quien gana en cada ronda-->
-                <p class="participante">Puntos en esta ronda para: </p>
-                <p class="participante mostrar-puntaje"></p>
-            </div>
+            <script>
+                let sonido = new audio();
+                sonido.src = Sonidos/sonidoBoton.mp3;
+            </script>
 
             <div class="container-finalizar-juego">
                 <button class="btn-inicio">Finalizar juego</button>
             </div>
 
-            <footer>
-                <h1>Juan Camilo Rios Tarazona</h1>
-            </footer>
         </div>
 
         <div class="container-final-juego"><!----------------------------------------Final del juego-->
@@ -83,9 +81,13 @@
             </div>
         </div>
 
-        
+        <footer id="footer">
+            <h3>Desarrollado Por: </h3>
+            <h1>Juan Camilo Rios Tarazona</h1>
+        </footer>
     </div>
 
+    <script src="controladorPaginas.js"></script>
     <script src="logicaJuego.js"></script>
 </body>
 </html>

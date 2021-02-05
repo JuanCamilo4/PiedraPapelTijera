@@ -5,8 +5,6 @@ const btnPapel = document.getElementById('btnPapel');
 btnPapel.addEventListener('click', function(e) {eleccionJugador(2);});
 const btnTijera = document.getElementById('btnTijera');
 btnTijera.addEventListener('click', function(e) {eleccionJugador(3);});
-const btnJugar = document.getElementById('btnJugar');
-btnJugar.addEventListener('click', function(e) {/*Habilitar juego*/});
 
 const nombreJugador = document.getElementById('nombreJugador');
 
@@ -99,34 +97,57 @@ const controladorPuntos = (resultadoEncuentro) =>{ //Método para controlar que 
     }
 }
 
+const mostrarPuntosMarcador = () =>{
+    const marcadorJugador = document.getElementById('puntosJugador');
+    const marcadorIA = document.getElementById('puntosIA');
+
+    marcadorJugador.innerHTML = puntos['jugador'];
+    marcadorIA.innerHTML = puntos['IA'];
+}
+
 const juego = () =>{//Método que compara la eleccion de los dos jugadores
     let jugador = opcionesMano[respuestaJugador];
     let IA = eleccionIA();
+    const eleccionContrincante = document.getElementById('eleccionIA');
 
     console.log(jugador);
     console.log(IA);
 
     if(jugador == IA){ //0: Piedra, 1: Papel, 2: Tijera
         console.log("empate");
+        eleccionContrincante.innerHTML = IA;
         controladorPuntos(2);
+        mostrarPuntosMarcador();
     } else if(jugador == opcionesMano[0] && IA == opcionesMano[2]){
         console.log("Ganador Jugador");
+        eleccionContrincante.innerHTML = opcionesMano[2];
         controladorPuntos(0);
+        mostrarPuntosMarcador();
     } else if(jugador == opcionesMano[2] && IA == opcionesMano[1]){
         console.log("Ganador Jugador");
+        eleccionContrincante.innerHTML = opcionesMano[1];
         controladorPuntos(0);
+        mostrarPuntosMarcador();
     } else if(jugador == opcionesMano[1] && IA == opcionesMano[0]){
         console.log("Ganador Jugador");
+        eleccionContrincante.innerHTML = opcionesMano[0];
         controladorPuntos(0);
+        mostrarPuntosMarcador();
     } else if(IA == opcionesMano[0] && jugador == opcionesMano[2]){
         console.log("Ganador IA");
+        eleccionContrincante.innerHTML = opcionesMano[0];
         controladorPuntos(1);
+        mostrarPuntosMarcador();
     } else if(IA == opcionesMano[2] && jugador == opcionesMano[1]){
         console.log("Ganador IA");
+        eleccionContrincante.innerHTML = opcionesMano[2];
         controladorPuntos(1);
+        mostrarPuntosMarcador();
     } else if(IA == opcionesMano[1] && jugador == opcionesMano[0]){
         console.log("Ganador IA");
+        eleccionContrincante.innerHTML = opcionesMano[1];
         controladorPuntos(1);
+        mostrarPuntosMarcador();
     } else {
         console.log("Error"); 
     }

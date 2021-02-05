@@ -1,0 +1,112 @@
+footer{
+    margin-left: 5%;
+}
+footer h1{
+    text-decoration: underline;
+    color: #000;
+    font-size: 38px;
+}
+footer h3{
+    font-size: 24px;
+}
+#btnPiedra{
+    background-image: url(img/imgIcoPiedra.png);
+}
+#btnTijera{
+    background-image: url(img/imgIcoTijera.png);
+}
+#btnPapel{
+    background-image: url(img/imgIcoPapel.png);
+}
+#eleccionIA{
+    text-decoration: underline;
+}
+.container-juego{
+    margin-top: 3%;
+    width: 40%;
+    max-width: 45%;
+    background-color: rgb(248, 248, 248);
+    border: 8px solid #6a492b;
+    border-radius: 20px;
+    padding: 45px 60px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.container-marcador{
+    border: 4px dashed #a06630;
+    border-radius: 10px;
+    margin-top: 4%;
+    padding: 15px 10px;
+    width: 100%;
+}
+.container-marcador h2{
+    text-align: center;
+    margin-top: 0.5%;
+    margin-bottom: 0.7%;
+}
+.container-marcador h2::after{
+    border: 2px solid #f88f01;
+    margin: 0 auto;
+    border-radius: 100px;
+    width: 67%;
+    display: block;
+    margin-top: 2.3%;
+    content: "";
+}
+.container-marcadores{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.container-marcador-puntaje{
+    margin: 0 10%;
+    text-align: center;
+}
+.container-marcador-puntaje:last-child{
+    margin-left: 20%;
+}
+.participante{
+    font-size: 19px;
+    margin-bottom: 2%;
+}
+.puntaje{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.IA-eleccion{
+    display: inline-block;
+}
+
+.container-botones{
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn-opcion{
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    border: 8px solid #402A16;
+    margin: 0 5%;
+    background-position: center;
+    background-size: 150%;
+    transition: all 0.3s;
+}
+.btn-opcion:focus{
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.btn-opcion:hover{
+    background-size: 170%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.container-finalizar-juego{
+    margin-top: 10%;
+    text-align: center;
+}
