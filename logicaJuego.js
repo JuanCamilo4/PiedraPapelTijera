@@ -10,18 +10,24 @@ const nombreJugador = document.getElementById('nombreJugador');
 
 let opcionesMano = ['Piedra', 'Papel', 'Tijera']; 
 
-let verificadorTurno = false; //Verfica que el jugeador ya dio su turno
+let verificadorTurno = false; //Verfica que el jugador ya dio su turno
 
 let respuestaJugador = 0; //Respuesta que el jugador selecciona
 let countJ = 0;//Variable que cuenta cuantas veces gano consecutivamente un jugador;
 let countIA = 0;//Variable que cuenta cuantas veces gano consecutivamente la IA;
-let seguimientoJugador;
-let seguimientoIA;
+let seguimientoJugador; //Variable que verifica si el jugador más de 3 veces seguidas
+let seguimientoIA;  //Variable que verifica si el jugador más de 3 veces seguidas
 
 let puntos = {//Array asociativo para almacenar los puntos de ambas partes
     jugador: 0,
     IA: 0
 };
+
+$('#btnJugar').click(function (e) {  //Funcion para reiniciar elcontador de puntos
+    puntos['jugador'] = 0;
+    puntos['IA'] = 0;
+});
+
 
 const eleccionJugador = idBoton =>{//0: Piedra, 1: Papel, 2: Tijera
     switch(idBoton){

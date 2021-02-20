@@ -3,6 +3,12 @@
 	src: url("fonts/Raleway.ttf");
 	src: local(),
 		url("fonts/Raleway.woff") format("woff");
+
+    font-family: "Rowan";
+    src: url("fonts/RowanMaskide.ttf");
+    src: local(),
+        url("fonts/RowanMaskide.woff") format("woff"),
+        url("fonts/RowanMaskide.otf") format("otf");
 }
 *{
     padding: none;
@@ -14,6 +20,7 @@ body{
     font-family: Raleway, Arial, Helvetica, sans-serif;
 }
 .container-juego, .container-final-juego{
+    visibility: hidden;
     display: none;
 }
 .container-padre{

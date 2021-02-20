@@ -3,11 +3,12 @@ footer{
 }
 footer h1{
     text-decoration: underline;
-    color: #000;
+    color: #fff;
     font-size: 38px;
 }
 footer h3{
     font-size: 24px;
+    color: #fff;
 }
 #btnPiedra{
     background-image: url(img/imgIcoPiedra.png);
@@ -57,6 +58,7 @@ footer h3{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 .container-marcador-puntaje{
     margin: 0 10%;

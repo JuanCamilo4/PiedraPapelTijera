@@ -1,0 +1,41 @@
+/*#mostrarPuntosJugador{
+    font-size: 38px;
+}Como se va a mostrar el ganador */ 
+.container-final-juego{
+    margin-top: 3%;
+    width: 35%;
+    max-width: 800px;
+    background-color: rgb(248, 248, 248);
+    border: 8px solid #df3400;
+    border-radius: 20px;
+    padding: 45px 60px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.container-final-juego h1{
+    text-align: center;
+    color: #f83b01;
+    font-weight: bold;
+    font-family: Rowan, Arial, Helvetica, sans-serif;
+    margin-bottom: 10%;
+    font-size: 4.5vw;
+}
+.container-final-juego h2{ /*Puntuacion final h2*/
+    text-align: center;
+    font-size: 2.5vw;
+    margin-bottom: 1%;
+}
+.container-volver{
+    margin-top: 10%;
+    text-align: center;
+}
+.container-volver button{
+    border-color: #f83b01;
+}
+.container-marcador-puntaje p, .container-marcador-puntaje div{
+    font-size: 2vw;
+}
+.anuncio-ganador{
+    font-size: 3vw;
+    display: none;
+}
