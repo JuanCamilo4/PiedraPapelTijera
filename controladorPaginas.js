@@ -10,29 +10,36 @@ $(document).ready(function() {
     }); 
 });
 
+/*--Instanciar objetos--*/
+
+
 const comenzarJuego = () =>{
-    const inicio = document.querySelector('.container-inicio');
-    const juego = document.querySelector('.container-juego');
-    const autor = document.getElementById('footer');
+    const inicio = $('.container-inicio');
+    const juego = $('.container-juego');
+    const autor = $('#footer');
     let validacionNombre = validarNombre();
 
     if(validacionNombre){
         $('#puntosJugador').text('0');
         $('#puntosIA').text('0');
 
-        document.querySelector('.participante').innerHTML = document.getElementById('nombreJugador').value;
-        inicio.style.visibility = 'hidden';
-        inicio.style.display = 'none';
-        
+        inicio.css({
+            visibility: 'hidden',
+            display: 'none'
+        });
+        juego.css({
+            visibility: 'visible',
+            display: 'block',
+            filter: 'blur(0px)'
+        });
+
         footer.style.display = 'none';
-        juego.style.visibility = 'visible';
-        juego.style.display = 'block';
-        juego.style.filter = 'blur(0px)';
         $('#estadoJuego').val(true);
     } else {
         console.log("Seleccione un nombre correcto");
     }
 }
+
 const finalizarJuego = () =>{
     let puntos = {
         jugador: 0,
@@ -43,7 +50,7 @@ const finalizarJuego = () =>{
 
     puntos['jugador'] = $('#puntosJugador').text();
     puntos['IA'] = $('#puntosIA').text();
-    $('#txtNombreJugadorFinal').text(document.getElementById('nombreJugador').value);
+    $('#txtNombreJugadorFinal').text($('nombreJugador').val());
     $('#mostrarPuntosJugador').text(puntos['jugador']);
     $('#mostrarPuntosIA').text(puntos['IA']);
 
@@ -63,11 +70,10 @@ const finalizarJuego = () =>{
     });
 
     $('.container-juego').css('filter', 'blur(5px)');
-    $('.container-final-juego').css('z-index', '10000');
     $('.container-final-juego').css({
-        display: 'block', 
-        visibility: 'visible',
-        position: 'absolute'
+        opacity: '1',
+        zIndex: '1000',
+        transition: 'all 0.7s'
     });
 }
 
@@ -77,8 +83,8 @@ const volverPantallaMain = () =>{
         visibility: 'hidden'
     });
     $('.container-final-juego').css({
-        display: 'none',
-        visibility: 'hidden'
+        opacity: '0',
+        zIndex: '-100'
     });
     $('.container-inicio').css({
         display: 'block',
@@ -100,7 +106,7 @@ const validarNombre = () =>{
         if(nombre.length <= 14){
             verificadorNombre = true;
         } else {
-            console.log("El nombre es muy largo");
+            alert("El nombre es muy largo. Debe tener 14 o menos caracteres");
             verificadorNombre = false;
         }
     }

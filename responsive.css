@@ -1,0 +1,58 @@
+@media screen and (max-width: 1024px){
+    .container-padre{
+        display: block;
+        text-align: center;
+        margin-top: 5%;
+    }
+    
+    /*--Container del inicio--*/
+    .container-inicio{
+        margin: 0 auto;
+        width: 90%;
+        padding: 45px 1%;
+        padding-top: 10px;
+    }
+    .logo{
+        min-width: 200px;
+    }
+    .container-inicio p{
+        font-size: min(20px);
+
+    }
+    .container-inputs input{
+        width: 90%;
+    }
+    .container-botones-inicio{
+        margin-top: 5%;
+    }
+    .container-botones-inicio .btn-inicio{
+        margin-bottom: 1%;
+        padding: 10px 5%;
+    }
+
+    /*--Container del juego--*/
+    .container-juego{
+        margin: 0 auto;
+        width: 90%;
+        padding: 45px 1%;
+        padding-top: 10px;
+    }
+    .container-marcador-puntaje p, .container-marcador-puntaje div{
+        font-size: min(22px);
+    }
+
+    /*--Container final del juego--*/
+    .container-final-juego{
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 80%;
+    }
+    .container-final-juego h1{
+        font-size: 40px;   
+    }
+    .anuncio-ganador{
+        font-size: 50px !important;
+    }
+}

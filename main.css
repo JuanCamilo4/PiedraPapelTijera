@@ -19,14 +19,21 @@ body{
     background-color: #f88f01;
     font-family: Raleway, Arial, Helvetica, sans-serif;
 }
-.container-juego, .container-final-juego{
-    visibility: hidden;
+.container-juego{
     display: none;
 }
 .container-padre{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.container-final-juego{
+    opacity: 0;
+    position: absolute;
+    z-index: -100;
+    transition: all 0.3s;
+    visibility: visible;
+    display: block;
 }
 .container-logo{
     margin: none;
@@ -43,6 +50,10 @@ body{
     padding: 45px 60px;
     padding-top: 10px;
     box-sizing: border-box;
+}
+.container-inicio p{
+    text-align: center; 
+    font-size: 1.2vw;
 }
 .container-inicio .container-logo{
     text-align: center;
