@@ -22,6 +22,9 @@ const comenzarJuego = () =>{
     if(validacionNombre){
         $('#puntosJugador').text('0');
         $('#puntosIA').text('0');
+        console.log($('#nombreJugador').val());
+
+        $('#txtNombreJugador').text($('#nombreJugador').val());
 
         inicio.css({
             visibility: 'hidden',
@@ -50,7 +53,7 @@ const finalizarJuego = () =>{
 
     puntos['jugador'] = $('#puntosJugador').text();
     puntos['IA'] = $('#puntosIA').text();
-    $('#txtNombreJugadorFinal').text($('nombreJugador').val());
+    $('#txtNombreJugadorFinal').text($('#nombreJugador').val());
     $('#mostrarPuntosJugador').text(puntos['jugador']);
     $('#mostrarPuntosIA').text(puntos['IA']);
 
