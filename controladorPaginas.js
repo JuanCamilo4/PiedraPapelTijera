@@ -19,6 +19,8 @@ const comenzarJuego = () =>{
     const autor = $('#footer');
     let validacionNombre = validarNombre();
 
+
+
     if(validacionNombre){
         $('#puntosJugador').text('0');
         $('#puntosIA').text('0');
@@ -61,9 +63,11 @@ const finalizarJuego = () =>{
     if(puntos['jugador'] > puntos['IA']){
         colorAnuncio = 'rgb(0, 255, 0)';
         anuncio.text('GANASTE!!');
+        console.log("Ganador")
     } else if(puntos['jugador'] < puntos['IA']){
         colorAnuncio = 'rgb(255, 0, 0)';
         anuncio.text('INTENTA OTRA VEZ');
+        console.log("Ganador")
     } else {
         colorAnuncio = 'rgb(0, 0, 0)';
         anuncio.text('EMPATE');

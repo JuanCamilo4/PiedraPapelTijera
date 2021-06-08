@@ -26,6 +26,10 @@ let puntos = {//Array asociativo para almacenar los puntos de ambas partes
 $('#btnJugar').click(function (e) {  //Funcion para reiniciar elcontador de puntos
     puntos['jugador'] = 0;
     puntos['IA'] = 0;
+    countJ = 0;
+    countIA = 0;
+    seguimientoIA = 0;
+    seguimientoJugador = 0;
 });
 
 
